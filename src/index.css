@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import "tailwindcss";
+
+
+
+@theme{
+  --font-heading: "Boldonse", system-ui;
+  --font-body: "Saira", sans-serif;
+  
+
+}
+
+@theme{
+  --color-hc: #133458;
+  --color-border-custom: #D3D3D3;
+  --color-secondary: #A3A3A3;
+}
