@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import projects from "../data/project";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/projectCard";
 
 const Project = () => {
   return (
