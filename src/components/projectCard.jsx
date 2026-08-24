@@ -1,58 +1,59 @@
 import React from "react";
-import Description from "../components/description"
+import Description from "../components/description";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="w-90 border border-border-custom rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+    <div className="w-full overflow-hidden rounded-xl border border-border-custom shadow-md transition duration-300 hover:shadow-xl">
 
-    <div className="">
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-52 object-cover"
+      {/* Project Image */}
+      <div className="w-full">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="h-48 w-full object-cover sm:h-52"
         />
-    </div>
+      </div>
 
-      
-      <div className="border-t-1 border-border-custom p-6">
+      {/* Content */}
+      <div className="border-t border-border-custom p-5 sm:p-6">
 
-        <h2 className="text-xl/1.2 font-bold font-heading text-hc mb-2">
+        {/* Title */}
+        <h2 className="mb-2 font-heading text-xl font-bold leading-tight text-hc sm:text-2xl">
           {project.title}
         </h2>
 
+        {/* Description */}
         <Description
           text={project.description}
         />
 
-        
-        <div className="flex flex-wrap gap-2 mt-4">
+        {/* Technologies */}
+        <div className="mt-4 flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-xs text-hc font-body rounded-full bg-gray-200"
+              className="rounded-full bg-gray-200 px-3 py-1 font-body text-xs text-hc"
             >
               {tech}
             </span>
           ))}
         </div>
 
-        
-        <div className="flex gap-3 mt-5">
+        {/* Buttons */}
+        <div className="mt-5 flex flex-wrap gap-3">
 
           <a
             href={project.liveLink}
-            // target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg bg-hc text-white"
-            >
+            className="rounded-lg bg-hc px-4 py-2 font-body text-sm text-white transition hover:opacity-90 sm:text-base"
+          >
             Live Demo
-          </a>  
+          </a>
 
           <a
             href={project.githubLink}
-            //target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg border"
+            className="rounded-lg border border-border-custom px-4 py-2 font-body text-sm text-hc transition hover:bg-hc hover:text-white sm:text-base"
           >
             GitHub
           </a>

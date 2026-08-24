@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 import {
   FaHtml5,
@@ -15,12 +14,11 @@ import {
   FaArrowLeft,
   FaCode,
 } from "react-icons/fa";
+
 import {
   SiTailwindcss,
   SiExpress,
   SiMongodb,
-  SiTypescript,
-  SiNextdotjs,
   SiGooglesearchconsole,
   SiGoogleanalytics,
   SiGoogletagmanager,
@@ -57,18 +55,6 @@ const skills = [
     category: "Frontend",
     color: "#61DBFB",
   },
-//   {
-//     name: "Next.js",
-//     icon: <SiNextdotjs />,
-//     category: "Frontend",
-//     color: "#0070f3",
-//   },
-//   {
-//     name: "TypeScript",
-//     icon: <SiTypescript />,
-//     category: "Frontend",
-//     color: "#3178C6",
-//   },
   {
     name: "Node.js",
     icon: <FaNodeJs />,
@@ -139,59 +125,71 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="min-h-screen overflow-hidden px-6 py-20">
+    <section className="min-h-screen overflow-x-hidden px-4 py-10 sm:px-6 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl">
 
         {/* Heading */}
-        <div className="mb-12 flex flex-row justify-between items-start">
-        <div className="w-[70%] flex flex-col ">
-          <p className="font-body text-2xl font-bold uppercase tracking-widest text-gray-400">
-            My Skills
-          </p>
+        <div className="mb-10 flex flex-col gap-8 sm:mb-12 md:flex-row md:items-start md:justify-between">
 
-          <h1 className="mt-5 font-heading text-md leading-[1.5em] font-bold text-hc md:text-6xl">
-            Technologies & Tools
-          </h1>
+          {/* Left Content */}
+          <div className="w-full md:w-[70%]">
+            <p className="font-body text-lg font-bold uppercase tracking-widest text-gray-400 sm:text-2xl">
+              My Skills
+            </p>
 
-          <p className="mt-8 max-w-2xl font-body text-gray-500">
-            I work with modern technologies to build responsive,
-            user-friendly, and scalable web applications.
-          </p>
-        </div>    
+            <h1 className="mt-4 font-heading text-4xl font-bold leading-tight text-hc sm:text-5xl md:mt-5 md:text-6xl">
+              Technologies & Tools
+            </h1>
 
-        <div className="flex flex-row w-[30%] items-end justify-end">
-          <Link
-            to="/"
-            className="flex w-fit items-center gap-2 rounded-lg border border-border-custom px-5 py-2.5 font-body font-bold text-hc transition duration-300 hover:bg-hc hover:text-white"
+            <p className="mt-5 max-w-2xl font-body text-sm leading-6 text-gray-500 sm:mt-8 sm:text-base sm:leading-7">
+              I work with modern technologies to build responsive,
+              user-friendly, and scalable web applications.
+            </p>
+          </div>
+
+          {/* Home Button */}
+          <div className="flex w-full justify-start md:w-[30%] md:justify-end">
+            <Link
+              to="/"
+              className="flex w-fit items-center gap-2 rounded-lg border border-border-custom px-4 py-2.5 font-body text-sm font-bold text-hc transition duration-300 hover:bg-hc hover:text-white sm:px-5 sm:text-base"
             >
-            <FaArrowLeft />
-            <span>Home</span>
-          </Link>
-        </div>
+              <FaArrowLeft />
+              <span>Home</span>
+            </Link>
+          </div>
+
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 min-[400px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="group flex min-h-32 flex-col items-center justify-center rounded-xl border border-border-custom p-5 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group flex min-h-32 w-full flex-col items-center justify-center rounded-xl border border-border-custom p-4 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-5"
             >
-              <div className="text-4xl transition-transform duration-300 group-hover:scale-110"
-              style={{color: skill.color}}
+
+              {/* Icon */}
+              <div
+                className="text-4xl transition-transform duration-300 group-hover:scale-110"
+                style={{ color: skill.color }}
               >
                 {skill.icon}
               </div>
 
-              <h2 className="mt-4 font-body font-bold text-hc">
+              {/* Skill Name */}
+              <h2 className="mt-4 font-body text-sm font-bold leading-5 text-hc sm:text-base">
                 {skill.name}
               </h2>
 
+              {/* Category */}
               <span className="mt-1 text-xs text-gray-400">
                 {skill.category}
               </span>
+
             </div>
           ))}
+
         </div>
 
       </div>
