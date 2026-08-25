@@ -1,6 +1,7 @@
 import React from "react";
 import Description from "../components/description";
 
+
 const ProjectCard = ({ project }) => {
   return (
     <div className="w-full overflow-hidden rounded-xl border border-border-custom shadow-md transition duration-300 hover:shadow-xl">
