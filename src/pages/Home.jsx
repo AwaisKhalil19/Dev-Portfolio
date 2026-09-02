@@ -258,18 +258,19 @@ const Home = () => {
 
 
           {/* Heading */}
-          <h1 className="max-w-5xl font-heading text-3xl font-black leading-tight tracking-tight text-hc sm:text-4xl md:text-5xl">
-            MERN Stack
-            <span className="block text-gray-300">
-              &
-            </span>
+          {/* Heading */}
+<h1 className="w-full max-w-5xl font-heading text-3xl font-black leading-[1em] tracking-tight text-hc sm:text-4xl md:text-5xl">
+  MERN Stack
 
-            <span className="block">
-            WordPress Developer
-            </span>
+  <span className="block text-gray-300">
+    &
+  </span>
 
-          </h1>
-
+  <span className="block">
+    WordPress Developer
+  </span>
+</h1>
+          
 
           {/* Bottom Content */}
           <div className="mt-10 grid gap-8 border-t border-gray-200 pt-8 sm:mt-14 sm:grid-cols-[1fr_auto] sm:items-end">
