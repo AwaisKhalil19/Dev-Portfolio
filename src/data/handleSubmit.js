@@ -5,15 +5,15 @@ export const handleSubmit = (e, formData, setFormData) => {
 
   emailjs
     .send(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
+      "service_gko01q7",
+      "__ejs-test-mail-service__",
       {
         name: formData.name,
         email: formData.email,
         subject: formData.subject,
         message: formData.message,
       },
-      "YOUR_PUBLIC_KEY"
+      "hPmx1Rf-Y0lD3zDmo"
     )
     .then(() => {
       alert("Message sent successfully!");
