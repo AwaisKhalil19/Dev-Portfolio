@@ -170,7 +170,31 @@ const Home = () => {
 
 
             {/* Navigation */}
-            <div className="flex flex-wrap gap-2 sm:justify-end">
+            <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:justify-end">
+
+  <Link
+    to="/skills"
+    className="w-full rounded-full border border-gray-300 bg-white px-4 py-2.5 text-center font-body text-sm transition hover:border-hc hover:bg-hc hover:text-white sm:w-auto"
+  >
+    Skills
+  </Link>
+
+  <Link
+    to="/project"
+    className="w-full rounded-full border border-gray-300 bg-white px-4 py-2.5 text-center font-body text-sm transition hover:border-hc hover:bg-hc hover:text-white sm:w-auto"
+  >
+    Projects
+  </Link>
+
+  <Link
+    to="/experience"
+    className="w-full rounded-full border border-gray-300 bg-white px-4 py-2.5 text-center font-body text-sm transition hover:border-hc hover:bg-hc hover:text-white sm:w-auto"
+  >
+    Experience
+  </Link>
+
+</div>
+            {/* <div className="flex flex-wrap gap-2 sm:justify-end">
 
               <Link
                 to="/skills"
@@ -193,7 +217,7 @@ const Home = () => {
                 Experience
               </Link>
 
-            </div>
+            </div> */}
 
           </div>
 
