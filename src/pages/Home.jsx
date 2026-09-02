@@ -176,7 +176,7 @@ const Home = () => {
     to="/skills"
     className="w-full rounded-full border border-gray-300 bg-white px-4 py-2.5 text-center font-body text-sm transition hover:border-hc hover:bg-hc hover:text-white sm:w-auto"
   >
-    Skills
+   TechniKal Skills
   </Link>
 
   <Link
